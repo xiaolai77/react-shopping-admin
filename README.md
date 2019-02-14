@@ -1,5 +1,13 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# react-shopping-admin
+react 商城管理系统后台 前后端分离
 
+1、npx create-react-app react-shopping-admin   // npm 5.2+ 可使用npx   https://github.com/facebook/create-react-app
+
+2、cd react-shopping-admin
+
+3、npm start  //启动服务
+
+ 
 ## Available Scripts
 
 In the project directory, you can run:
