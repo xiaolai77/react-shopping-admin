@@ -7,6 +7,20 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+a {
+  text-decoration: none;
+  color: #222;
+}
+
+ul,
+li,
+p,
+a {
+  margin: 0;
+  padding: 0;
+}
+
 .App {
   font-size: 14px;
 }
@@ -28,6 +42,38 @@ body {
   font-size: 20px;
 }
 
+.App-collapse {
+  position: absolute;
+  left: 167px;
+  top: 50%;
+  width: 0;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  color: #546478;
+  font-weight: bold;
+  font-size:20px;
+  text-indent:1px;
+  z-index: 3;
+  -o-transition: all 0.2s ease;
+  -ms-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -webkit-transition: all 0.2s ease;
+  border-bottom: 9px solid transparent;
+  border-left: none;
+  border-right: 13px solid #f7f7f7;
+  border-top: 9px solid transparent
+}
+
+.App-collapse:hover {
+  left:160px;
+  cursor:pointer;
+  border-bottom: 8px solid transparent;
+  border-left: none;
+  border-right: 20px solid #f7f7f7;
+  border-top: 8px solid transparent
+}
+
 .App-left {
   width: 180px;
   position: absolute;
@@ -35,6 +81,51 @@ body {
   bottom: 0px;
   background-color: #EAEDF1;
   z-index: 2;
+}
+
+.App-left li {
+  list-style: none;
+  font-size: 12px;
+  line-height: 40px;
+}
+
+.nav-one {
+  width: 100%;
+}
+
+.nav-one:hover {
+  background-color: #f4f6f8;
+}
+
+.nav-one.active+ul {
+  display: block;
+}
+
+.App-left li ul {
+  display: none;
+}
+
+.App-left li ul li:hover {
+  background-color: #f4f6f8;
+  cursor: pointer;
+}
+
+.App-left ul a.active li {
+  background-color: #fff;
+}
+
+.App-left li ul li {
+  padding-left: 40px;
+  height: 40px;
+}
+
+.App-left .icon {
+  width: 30px;
+  height: 40px;
+  line-height: 40px;
+  float: left;
+  display: inline-block;
+  text-align: center;
 }
 
 .App-right {
