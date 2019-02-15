@@ -7,6 +7,10 @@ react 商城管理系统后台 前后端分离
 
 3、npm start  //启动服务
 
+框架使用react 、react-dom 、react-router-dom 路由
+字体图标使用http://fontawesome.dashgame.com/
+
+
  
 ## Available Scripts
 

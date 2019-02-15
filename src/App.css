@@ -48,39 +48,65 @@ a {
   top: 50%;
   width: 0;
   height: 50px;
-  line-height: 50px;
-  text-align: center;
   color: #546478;
   font-weight: bold;
-  font-size:20px;
-  text-indent:1px;
+  font-size: 20px;
   z-index: 3;
   -o-transition: all 0.2s ease;
   -ms-transition: all 0.2s ease;
   -moz-transition: all 0.2s ease;
   -webkit-transition: all 0.2s ease;
+}
+.App-collapse i{
+  position: absolute;
+  top:12px;
+}
+.App-collapse:hover {
+  left: 160px;
+  cursor: pointer;
+}
+.nav-hide .App-collapse {
+  left:0;
+  border-bottom: 9px solid transparent;
+  border-left: 13px solid #D9DEE4;
+  border-top: 9px solid transparent;
+}
+.nav-hide i{
+  left:-13px;
+}
+.nav-hide .App-collapse:hover {
+  border-bottom: 8px solid transparent;
+  border-left: 20px solid #D9DEE4;
+  border-top: 8px solid transparent;
+}
+.nav-show .App-collapse {
   border-bottom: 9px solid transparent;
   border-left: none;
   border-right: 13px solid #f7f7f7;
   border-top: 9px solid transparent
 }
-
-.App-collapse:hover {
-  left:160px;
-  cursor:pointer;
+.nav-show i{left:2px;}
+.nav-show .App-collapse:hover {
   border-bottom: 8px solid transparent;
   border-left: none;
   border-right: 20px solid #f7f7f7;
   border-top: 8px solid transparent
 }
 
+
+
 .App-left {
   width: 180px;
+  overflow: hidden;
   position: absolute;
   top: 50px;
   bottom: 0px;
   background-color: #EAEDF1;
   z-index: 2;
+  -o-transition: all 0.2s ease;
+  -ms-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -webkit-transition: all 0.2s ease
 }
 
 .App-left li {
@@ -137,4 +163,8 @@ a {
   right: 0px;
   overflow: hidden;
   overflow-y: auto;
+  -o-transition: all 0.2s ease;
+  -ms-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -webkit-transition: all 0.2s ease
 }

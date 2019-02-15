@@ -11,16 +11,28 @@ import Home from './pages/home';
 import Detail from './pages/detail';
 
 class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      navHide:false//左侧导航是否隐藏
+    };
+  }
+  toggleNav(){//显示隐藏导航
+    this.setState({navHide:!this.state.navHide});
+  }
   render() {
-    return (  
+     
+    return (
       <div className="App">
         <header className="App-header">
           <span>信息管理系统</span>
         </header>
         <BrowserRouter>
-        <div>
-          <div className="App-collapse"><i className="fa fa-angle-double-left"> </i></div>
-          <div className="App-left">
+        <div className={(this.state.navHide) ? "nav-hide" : "nav-show"}>
+          <div className="App-collapse" onClick={this.toggleNav.bind(this)}>
+              <i className={(this.state.navHide) ? "fa fa-angle-double-right" : "fa fa-angle-double-left"}></i>
+          </div>
+          <div className="App-left" style={{width: (this.state.navHide) ? "0" : "180px"}}>
               <ul>
                 <NavLink to='/home' activeClassName="active"><li><i className="icon"></i>首页</li></NavLink>
                 <li onClick={handleClick}>
@@ -41,7 +53,7 @@ class App extends Component {
                 </li>
               </ul>
           </div>
-          <div className="App-right">
+          <div className="App-right" style={{left: (this.state.navHide) ? "0" : "180px"}}>
             <Route exact path='/' component={Home} />
             <Route exact path='/home' component={Home} />
             <Route exact path='/detail' component={Detail} />
@@ -63,5 +75,8 @@ function handleClick(e) {//菜单的下拉收起
         e.target.firstChild.className="icon fa fa-caret-down"
      }
   };
+}
+function hideFun(){
+  console.log('qeqweq')
 }
 export default App;
