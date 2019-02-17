@@ -4,20 +4,14 @@ react 商城管理系统后台 前后端分离
 使用create-react-app 创建应用 npm版本在5.2以上可使用npx https://github.com/facebook/create-react-app
 执行如下命令创建：
 
-1、npx create-react-app react-shopping-admin   
+1、npm install
 
-2、cd react-shopping-admin
+2、npm start  
 
-3、npm start  //启动服务
 
 框架使用react 、react-dom 、react-router-dom 路由，
 字体图标使用http://fontawesome.dashgame.com/
 
-
- 
-## Available Scripts
-
-In the project directory, you can run:
 
 ### `npm start`
 

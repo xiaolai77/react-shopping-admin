@@ -1,0 +1,41 @@
+.i_qq_bg {
+    width: 94%;
+    height: auto;
+    padding: 0 0 20px 0;
+    border-color: rgb(219, 219, 234);
+    background: rgb(255, 255, 255);
+    margin: 20px auto;
+    box-shadow: 0 1px 3px #eee;
+}
+
+.i_qq h3 {
+    line-height: 1.5;
+    font-size: 16px;
+    border-bottom: 1px solid #eee;
+    font-weight: 600;
+    padding: 12px;
+    color: #456;
+    padding: 12px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.i_qq_bg table {
+	width: 100%;
+	height: auto;
+	text-align: center;
+	line-height: 50px;
+}
+
+.i_qq_bgt {
+	color: #757584;
+	font-size: 16px;
+	font-weight: bold;
+	width: 20%;
+}
+.i_qq_bgl {
+	color: #31313F;
+	font-size: 34px;
+	font-weight: bold;
+	font-family: 'Arial';
+}

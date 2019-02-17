@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './static/css/font-awesome.min.css';
-import './App.css';
+import './static/css/App.css';
 import {
   BrowserRouter,
   Route,
@@ -21,7 +21,6 @@ class App extends Component {
     this.setState({navHide:!this.state.navHide});
   }
   render() {
-     
     return (
       <div className="App">
         <header className="App-header">
@@ -36,19 +35,20 @@ class App extends Component {
               <ul>
                 <NavLink to='/home' activeClassName="active"><li><i className="icon"></i>首页</li></NavLink>
                 <li onClick={handleClick}>
-                  <div className="nav-one active"><i className="icon fa fa-caret-down"> </i>一级菜单 </div>
+                  <div className="nav-one active"><i className="icon fa fa-caret-down"> </i>商品管理 </div>
                   <ul>
-                    <NavLink to='/detail' activeClassName="active"><li>二级菜单</li></NavLink>
-                    <NavLink to='/detail' activeClassName="active"><li>二级菜单</li></NavLink>
-                    <NavLink to='/detail' activeClassName="active"><li>二级菜单</li></NavLink>
+                    <NavLink to='/detail' activeClassName="active"><li>上架商品</li></NavLink>
+                    <NavLink to='/detail' activeClassName="active"><li>未上架商品</li></NavLink>
+                    <NavLink to='/detail' activeClassName="active"><li>商品分类</li></NavLink>
                   </ul>
                 </li>
                 <li onClick={handleClick}>
-                  <div className="nav-one"><i className="icon fa fa-caret-right"> </i>一级菜单 </div>
+                  <div className="nav-one active"><i className="icon fa fa-caret-right"> </i>订单管理 </div>
                   <ul>
-                    <li><Link to='/detail'>二级菜单</Link></li>
-                    <li><Link to='/detail'>二级菜单</Link></li>
-                    <li><Link to='/detail'>二级菜单</Link></li>
+                    <li><Link to='/detail'>全部订单</Link></li>
+                    <li><Link to='/detail'>待付款</Link></li>
+                    <li><Link to='/detail'>已完成</Link></li>
+                    <li><Link to='/detail'>已关闭</Link></li>
                   </ul>
                 </li>
               </ul>
@@ -75,8 +75,5 @@ function handleClick(e) {//菜单的下拉收起
         e.target.firstChild.className="icon fa fa-caret-down"
      }
   };
-}
-function hideFun(){
-  console.log('qeqweq')
 }
 export default App;
