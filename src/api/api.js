@@ -3,7 +3,7 @@ const apiStr='https://laihw.top/apiStr';
 
 export function categoryApi(){//分类
     return request({
-        url: apiStr+'/api/act/house/valuation/list.htm', 
+        url: apiStr+'/catalog/index', 
         method: 'post'
     })
 }

@@ -9,6 +9,7 @@ import {
 } from 'react-router-dom';
 import Home from './pages/home';
 import Detail from './pages/detail';
+import Category from './pages/category';
 
 class App extends Component {
   constructor(props) {
@@ -39,7 +40,7 @@ class App extends Component {
                   <ul>
                     <NavLink to='/detail' activeClassName="active"><li>上架商品</li></NavLink>
                     <NavLink to='/detail' activeClassName="active"><li>未上架商品</li></NavLink>
-                    <NavLink to='/detail' activeClassName="active"><li>商品分类</li></NavLink>
+                    <NavLink to='/category' activeClassName="active"><li>商品分类</li></NavLink>
                   </ul>
                 </li>
                 <li onClick={handleClick}>
@@ -57,6 +58,7 @@ class App extends Component {
             <Route exact path='/' component={Home} />
             <Route exact path='/home' component={Home} />
             <Route exact path='/detail' component={Detail} />
+            <Route exact path='/category' component={Category} />
           </div>
         </div>
         </BrowserRouter>

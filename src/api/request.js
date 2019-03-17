@@ -17,7 +17,11 @@ service.interceptors.request.use(function (config) {
 
 // 添加响应拦截器
 service.interceptors.response.use(function (response) {
-	return Promise.reject(response.data);
+	if(response.data.errno===0){
+		return Promise.resolve(response.data.data);
+	}else {
+        return Promise.reject(false);
+	}
 }, function (error) {
 	return Promise.reject(error);
 });
